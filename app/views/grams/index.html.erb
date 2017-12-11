@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="wrapper col-md-8 col-md-offset-2 col-sm-10">
+    <p class="flash"><%= notice %><%= alert %></p>
+    <h1>Pictures</h1>
+      <%= link_to "写真を投稿する", new_gram_path, class: 'btn btn-default' %>
+    <% @grams.each do |gram| %>
+    <div class="row">
+      <h4><strong><%= gram.title %></strong></h4>
+      <p><%= gram.content %></p>
+      <%= link_to "編集", edit_gram_path(gram.id), class: 'btn btn-default btn-sm btn-success' %>
+      <%= link_to "削除", gram_path(gram.id), method: :delete, data: { confirm: '本当に削除していいですか？'}, class: 'btn btn-default btn-sm btn btn-danger' %>
+    </div>
+    <% end %>
+  </div>
+</div>
