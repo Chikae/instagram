@@ -2,8 +2,8 @@ config.action_mailer.default_url_options = { host: 'https://blooming-sierra-2942
 ActionMailer::Base.delivery_method = :smtp
 ActionMailer::Base.smtp_settings =
 {
- user_name: ENV["app75114881@heroku.com"]
- password: ENV["fujiczs80196"]
+ user_name: ENV["SENDGRID_USERNAME"],
+ password: ENV["SENDGRID_PASSWORD"],
  domain: "heroku.com",
  address: "smtp.sendgrid.net",
  port: 587,
