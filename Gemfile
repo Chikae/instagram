@@ -54,13 +54,14 @@ group :development do
   gem 'pry-rails'
   gem 'better_errors'
   gem 'dotenv-rails'
-  gem 'omniauth'
-  gem 'omniauth-twitter'
-  gem 'omniauth-facebook'
-  
+
+end
+
 gem 'rails_admin'
 
 gem 'cancan'
 
 
-end
+gem 'omniauth'
+gem 'omniauth-twitter'
+gem 'omniauth-facebook'
