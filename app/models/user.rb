@@ -7,6 +7,7 @@ class User < ActiveRecord::Base
 
   has_many :gram
   mount_uploader :avatar, AvatarUploader
+  mount_uploader :picture, PictureUploader
 
   def self.find_for_facebook_oauth(auth, signed_in_resource=nil)
     user = User.find_by(provider: auth.provider, uid: auth.uid)
