@@ -5,6 +5,7 @@
       <%= link_to "写真を投稿する", new_gram_path, class: 'btn btn-default' %>
     <% @grams.each do |gram| %>
     <div class="row">
+      <%= profile_img(gram.user) %>
       <h4><strong><%= gram.title %></strong></h4>
       <p><%= gram.content %></p>
       <%= link_to "編集", edit_gram_path(gram.id), class: 'btn btn-default btn-sm btn-success' %>
