@@ -3,6 +3,7 @@ class CreateGrams < ActiveRecord::Migration
     create_table :grams do |t|
       t.string :title
       t.text :content
+      t.text :picture
 
       t.timestamps null: false
     end

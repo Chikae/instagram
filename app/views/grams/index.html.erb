@@ -7,6 +7,7 @@
     <div class="row">
       <%= profile_img(gram.user) %>
       <h4><strong><%= gram.title %></strong></h4>
+      <%= image_tag(gram.content) %>
       <p><%= gram.content %></p>
       <%= link_to "編集", edit_gram_path(gram.id), class: 'btn btn-default btn-sm btn-success' %>
       <%= link_to "削除", gram_path(gram.id), method: :delete, data: { confirm: '本当に削除していいですか？'}, class: 'btn btn-default btn-sm btn btn-danger' %>
